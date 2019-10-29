@@ -28,5 +28,5 @@ Route::resource('/admin/apoteker', 'ApotekerController');
 
 Route::get('/admin/import', 'ImportUserController@index')->name('import');
 Route::post('/admin/import', 'ImportUserController@import')->name('import.import');
-// Route::post('import', 'TestController@import');
-// Route::get('export', 'TestController@export');
+
+Route::get('/firebase', 'FirebaseController@index');

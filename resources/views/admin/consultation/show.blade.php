@@ -5,8 +5,9 @@
 
         <div class="box">
             <div class="box-header">
-                <h3 class="card-title">Data Konsultasi</h3>
-            
+                <h3 class="card-title">Data Pesan</h3>
+                <h5 class="box-title">Konseli Terkait: </h5><p></p>
+                <h5 class="box-title">Apoteker Terkait: </h5>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -20,41 +21,17 @@
                     <thead>
                         <tr>
                             <th>No</th>
-                            <th>Konseli</th>
-                            <th>Apoteker</th>
-                            <th>Pengajuan</th>
-                            <th>Status</th>
-                            {{-- <th>Aksi</th> --}}
+                            <th>Pengirim</th>
+                            <th>Pesan</th>
                         </tr>
                     </thead>
                     <tbody>
                         @php $no = 1 @endphp
-                        @foreach($consultation as $product)
+                        @foreach($all_chats as $product)
                         <tr>
                             <td>{{ $no++ }}</td>
-                            <td>{{ $product['user_id'] }}</td>
-                            <td>{{ $product['apoteker_id'] }}</td>
-                            <td>{{ $product['waktu_pengajuan'] }}</td>
-                            <td>{{ $product['status_chat'] }}</td>
-                            {{-- <td> --}}
-                                    {{-- <a class="btn btn-info"
-                                    href="{{ URL::to('/admin/consultation/'.$product['chat_id']) }}"><i
-                                        class="fa fa-eye"></i></a> --}}
-                                {{-- <form method="POST" action="{{ URL::to('/admin/product/'.$product['id']) }}">
-                                    {{ csrf_field() }}
-                                    <input type="hidden" name="_method" value="DELETE" />
-                                    <div class="btn-group">
-                                        <a class="btn btn-info"
-                                            href="{{ URL::to('/admin/product/'.$product['id']) }}"><i
-                                                class="fa fa-eye"></i></a>
-                                        <a class="btn btn-success"
-                                            href="{{ URL::to('/admin/product/'.$product['id'].'/edit') }}"><i
-                                                class="fa fa-pencil"></i></a>
-                                        <button type="submit" class="btn btn-danger"><i
-                                                class="fa fa-trash"></i></button>
-                                    </div>
-                                </form> --}}
-                            {{-- </td> --}}
+                            <td>{{ $product['pengirim'] }}</td>
+                            <td>{{ $product['pesan'] }}</td>
                         </tr>
                         @endforeach
                         </tfoot>

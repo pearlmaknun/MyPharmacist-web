@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "mypharmacist-127fa",
+  "private_key_id": "dd15110865bfe8b418977f7d2101d72e362ba572",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC9TbHswfvYnKIk\nNTM5IORJaNx9KHRwrt2w54j0ehq7WZxVYjt6JiZIVyUxMFMQ3mFhD559ew+rw78q\n2hAXgIp4k/EOkbMMO/Bc/S/r+C/Ln5jRshdohE99ztlJkXIm3mBuRzeDHFMMaLmz\nHvoTvM5UVP83AJ+2sETzDgJ25mIvpjENsQ9SBkaVsqckRA4W4Q228lVOnns6F4hO\nQEHzdXSfzK5/ZvlHTsWe9dFV4HOnWOiCp0+vO16bivQfP0/0BEKyOAGX59mv4Z39\nMmQDrsrrOanPojp6nSV5dTkQCnmgmJBkStHrdZZ5roYVPP74sgQczLNbaUDNhTmd\nXUTn/ibhAgMBAAECggEAH8E0OvxxVC02L6+y537ifIP4FJCgM7TJoF6+hRAkgs/t\n3w7K3lse6dygcwdhr782A5OcqPznLI959mS89UxNLhvXAHQlXkSBtf+Mtd8cmWIs\nvuRKc/BZ60czANnClc2QzH7qy3YJYlgA6pCkL4Jo9BGL/DyBDiK0djcf57UOvGIx\nFgJV96ORQ4G9pa9qUcWAz+ZhonkFIf36PKEsdFHRXfxtaT8Iy/ux0l+B1cMspXUg\nqI/R5Hi2hw1r9p/EgYPb4OxE/ebZ7e3+l9qr5iK6GdobaV9qlPPe4d7SZpv36i0P\n7KqPw043Zt9FRizIcs1ZQCWvmkH8oHfIhxPSKAY13wKBgQDdKfbwcy3Eg/2HIqAR\nmjMPSYZSio6L6qLNf5+rHJhCbBa7H+mC0x7mK4JVTn+4m9a6oHHovWFrSsDgLtLR\n5VGrQfurnNU+CpZRQ+En03S+zz/jvl3mHvAitlveqrUtu2J9L0Z1HOtTfIEalFSG\nFvfH8fBiCoNeb8nouG3unwYnswKBgQDbHwQpGAZfgqKezZUJR1Kjls8j/MjWtToc\nv2Ns4JFz0/AuUZbeBSVFORZnTyiB7oijdt67G2Fff5is3EaOQhsOpaPJvtuEHqpC\n73m8bnrw9JTs6Ode9N35dxZRzgJNiJ/r4e5huSza0JdnrJebY+1NEtGcl0SF8XCi\n5qBv3mytGwKBgQCyP6Q631m/zPGE/K8uAK2uYH/V/r4snotgPMAfVQiSYDNh1bKK\nMkXxFJgS0RW3YEKMX8vu3NOrebBB/vsDGGPeN2vzQI/NVRMZpC/PvWmWb8r6bu+X\nDNBV6cvZhpRHq4MRigyrTweLXglftrT47YH+sEwheH+wmUCORDa1341CaQKBgEbL\ncJauUnDNTikslrhWuNZtxSMFawYjq1DabQ8iRxw7H2B3r9yvoOkKlrhuFNJV9QOL\nRk8Be6ZVHUjMKmeP6BoFXjOyXE4FclEJ+jTtJP9wpiUc4pQFXSpaVXW8r3XJbJHT\nfydHorxXpHM0ig8EbAj4yYxkOxljdlbLWI6MOGR9AoGAA6ttM34AsXWimhvRxGqV\nPw/ekbK9vQfQKkUr1WtfXaHSlfgylkQFrjldzqaxrpGZg79b+OjB4yhSpAv9e66y\n9i45OOOwzQYOu74fGy1AZNEmUBFT6wOp2L+blvtqUG6s4N1HrCC5nGXOLCcVuItt\nOSyrAfnzjarUI1+9VGpZzjw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-agegs@mypharmacist-127fa.iam.gserviceaccount.com",
+  "client_id": "105566015643551503289",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-agegs%40mypharmacist-127fa.iam.gserviceaccount.com"
+}

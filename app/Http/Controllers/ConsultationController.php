@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Kreait\Firebase\Factory;
 
 class ConsultationController extends Controller
 {
@@ -57,7 +58,22 @@ class ConsultationController extends Controller
      */
     public function show($id)
     {
-        //
+        $factory = (new Factory())
+            ->withServiceAccount(__DIR__.'/FirebaseKey.json')->create();
+
+        $database = $factory->getDatabase();
+        $ref = $database->getReference('Chats');
+        
+        $chats = $ref->getValue();
+
+        foreach ($chats as $chat){
+            if($chat['id_konsultasi'] == $id){
+                $all_chats[] = $chat;
+            }
+        }
+
+        //return $all_chats;
+        return view('admin.consultation.show', compact('all_chats'));
     }
 
     /**
