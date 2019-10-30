@@ -66,6 +66,9 @@ class ConsultationController extends Controller
         
         $chats = $ref->getValue();
 
+        // $data = \App\Consultation::where('chat_id', $id)->get();
+        // $d = ['data'=>$data];
+
         foreach ($chats as $chat){
             if($chat['id_konsultasi'] == $id){
                 $all_chats[] = $chat;
@@ -84,7 +87,7 @@ class ConsultationController extends Controller
      */
     public function edit($id)
     {
-        //
+        
     }
 
     /**
@@ -96,7 +99,14 @@ class ConsultationController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // $product=\App\::find($id);
+ 
+        // $product->name=$request->get('name');
+        // $product->condition=$request->get('condition');
+        // $product->price=$request->get('price');
+        // $product->description=$request->get('description');
+        // $product->image=$image;
+        // $product->save();
     }
 
     /**

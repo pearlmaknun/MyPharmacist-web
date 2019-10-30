@@ -24,7 +24,7 @@
                             <th>Apoteker</th>
                             <th>Pengajuan</th>
                             <th>Status</th>
-                            {{-- <th>Aksi</th> --}}
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -44,10 +44,10 @@
                                 <span class="label label-primary">N/A</span>
                                 @endif
                             </td>
-                            {{-- <td> --}}
-                                    {{-- <a class="btn btn-info"
+                            <td>
+                                    <a class="btn btn-info"
                                     href="{{ URL::to('/admin/consultation/'.$product['chat_id']) }}"><i
-                                        class="fa fa-eye"></i></a> --}}
+                                        class="fa fa-eye"></i></a>
                                 {{-- <form method="POST" action="{{ URL::to('/admin/product/'.$product['id']) }}">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="_method" value="DELETE" />
@@ -62,7 +62,7 @@
                                                 class="fa fa-trash"></i></button>
                                     </div>
                                 </form> --}}
-                            {{-- </td> --}}
+                            </td>
                         </tr>
                         @endforeach
                         </tfoot>

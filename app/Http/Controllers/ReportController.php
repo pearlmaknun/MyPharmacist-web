@@ -23,7 +23,10 @@ class ReportController extends Controller
      */
     public function index()
     {
-        //
+        //$consultation = \App\Consultation::all();
+        $consultation = \App\Consultation::where('status_chat', '5')->get();
+        $data = ['consultation'=>$consultation];
+        return view('admin/pelaporan/index')->with($data);
     }
 
     /**

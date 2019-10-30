@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index');
 
 Route::resource('/admin/consultation', 'ConsultationController');
+Route::resource('/admin/pelaporan', 'ReportController');
 Route::resource('/admin/konseli', 'KonseliController');
 Route::resource('/admin/apoteker', 'ApotekerController');
 //Route::resource('/admin/import', 'ImportUserController');
