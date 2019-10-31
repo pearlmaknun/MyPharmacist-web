@@ -32,11 +32,11 @@
 		</div>
 		@endif
 
-        <div class="form-group">
+        {{-- <div class="form-group">
             <button type="submit" class="btn btn-success">Download Template</button>
 
             <p class="help-block">Harap mengimport menggunakan Template diatas.</p>
-        </div>
+        </div> --}}
         <p class="help-block">Perhatikan!</p>
         <ol>
             <li>Tipe File .xlxs</li>

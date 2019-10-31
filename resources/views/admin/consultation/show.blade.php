@@ -6,8 +6,8 @@
         <div class="box">
             <div class="box-header">
                 <h3 class="card-title">Data Pesan</h3>
-                <a class="btn btn-info" href="">Suspend Apoteker</a>
-                <a class="btn btn-info" href="">Suspend Konseli</a>
+                {{-- <a class="btn btn-info" href="">Suspend Apoteker</a>
+                <a class="btn btn-info" href="">Suspend Konseli</a> --}}
                 {{-- <h5 class="box-title">Konseli Terkait: @php echo $data['chat_id']; @endphp</h5><p></p>
                 <h5 class="box-title">Apoteker Terkait: </h5> --}}
             </div>

@@ -23,7 +23,7 @@
                             <th>Nama</th>
                             <th>Email</th>
                             <th>Alamat</th>
-                            <th>Aksi</th>
+                            {{-- <th>Aksi</th> --}}
                         </tr>
                     </thead>
                     <tbody>
@@ -35,7 +35,7 @@
                             <td>{{ $product['apoteker_name'] }}</td>
                             <td>{{ $product['apoteker_email'] }}</td>
                             <td>{{ $product['apoteker_address'] }}</td>
-                            <td>
+                            {{-- <td>
                                 <form method="POST" action="{{ URL::to('/admin/product/'.$product['id']) }}">
                                     {{ csrf_field() }}
                                     <input type="hidden" name="_method" value="DELETE" />
@@ -50,7 +50,7 @@
                                                 class="fa fa-trash"></i></button>
                                     </div>
                                 </form>
-                            </td>
+                            </td> --}}
                         </tr>
                         @endforeach
                         </tfoot>

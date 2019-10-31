@@ -32,8 +32,8 @@
                         @foreach($consultation as $product)
                         <tr>
                             <td>{{ $no++ }}</td>
-                            <td>{{ $product['user_id'] }}</td>
-                            <td>{{ $product['apoteker_id'] }}</td>
+                            <td>{{ $product->konseli->user_name }}</td>
+                            <td>{{ $product->apoteker->apoteker_name }}</td>
                             <td>{{ $product['waktu_pengajuan'] }}</td>
                             <td>
                                 @if ($product['status_chat'] == '4')
