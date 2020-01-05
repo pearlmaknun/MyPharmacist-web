@@ -16,7 +16,7 @@ class ApotekerController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -25,7 +25,7 @@ class ApotekerController extends Controller
     public function index()
     {
         $apoteker = \App\Apoteker::all();
-        $data = ['apoteker'=>$apoteker];
+        $data = ['apoteker' => $apoteker];
         return view('admin/apoteker/index')->with($data);
     }
 
@@ -60,24 +60,24 @@ class ApotekerController extends Controller
     {
         //$apoteker = \App\Apoteker::where('apoteker_id', $id)->get();
         $apoteker = DB::table('tb_apoteker')
-        ->where('tb_apoteker.apoteker_id', '=', $id)
-        ->get();
+            ->where('tb_apoteker.apoteker_id', '=', $id)
+            ->get();
         $array = array(0, 0, 0);
-        if($apoteker[0]->apoteker_sipa1 != null && $apoteker[0]->apotek_sipa1 != null){
+        if ($apoteker[0]->apoteker_sipa1 != null && $apoteker[0]->apotek_sipa1 != null) {
             $array[0] = $apoteker[0]->apotek_sipa1;
         }
-        if($apoteker[0]->apoteker_sipa2 != null && $apoteker[0]->apotek_sipa2 != null){
+        if ($apoteker[0]->apoteker_sipa2 != null && $apoteker[0]->apotek_sipa2 != null) {
             $array[1] = $apoteker[0]->apotek_sipa2;
         }
-        if($apoteker[0]->apoteker_sipa3 != null && $apoteker[0]->apotek_sipa3 != null){
+        if ($apoteker[0]->apoteker_sipa3 != null && $apoteker[0]->apotek_sipa3 != null) {
             $array[2] = $apoteker[0]->apotek_sipa3;
         }
         $apotek = DB::table('tb_apotik')
-        ->whereIn('apotik_id', $array)
-        ->get();
-        
+            ->whereIn('apotik_id', $array)
+            ->get();
+
         $data = [
-            'data'=> $apoteker,
+            'data' => $apoteker,
             'apotek' => $apotek
         ];
 
@@ -104,9 +104,12 @@ class ApotekerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        DB::table('tb_apoteker')->where('apoteker_id', $request->id)->update([
+            'status' => $request->status
+        ]);
+        return redirect('/admin/apoteker');
     }
 
     /**

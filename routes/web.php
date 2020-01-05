@@ -25,6 +25,7 @@ Route::resource('/admin/consultation', 'ConsultationController');
 Route::resource('/admin/pelaporan', 'ReportController');
 Route::resource('/admin/konseli', 'KonseliController');
 Route::resource('/admin/apoteker', 'ApotekerController');
+Route::post('/admin/apoteker/update','ApotekerController@update');
 //Route::resource('/admin/import', 'ImportUserController');
 
 Route::get('/admin/import', 'ImportUserController@index')->name('import');

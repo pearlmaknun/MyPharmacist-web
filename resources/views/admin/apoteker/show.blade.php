@@ -88,8 +88,25 @@
                         </tr>
                         </tfoot>
                 </table>
-                <a class="btn btn-danger" href=""><i class="fa fa-power-off"> Tidak Diterima</i></a>
-                <a class="btn btn-primary" href=""><i class="fa fa-power-off"> Diterima</i></a>                        
+                <div class="row">
+                    <div class="col-sm-1">
+                        <form action="/admin/apoteker/update" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="id" value="{{ $data[0]->apoteker_id }}"> <br/>
+                            <input type="hidden" name="status" value="1"> <br/>
+                            <input type="submit" class="btn btn-primary" value="Diterima">
+                        </form>
+                    </div>
+                    <div class="col-sm-1">
+                        <form action="/admin/apoteker/update" method="post">
+                            {{ csrf_field() }}
+                            <input type="hidden" name="id" value="{{ $data[0]->apoteker_id }}"> <br/>
+                            <input type="hidden" name="status" value="2"> <br/>
+                            <input type="submit" class="btn btn-danger" value="Ditolak">
+                        </form>
+                    </div>
+                  </div> 
+                                     
             </div>
             <!-- /.box-body -->
         </div>
