@@ -23,7 +23,8 @@
                             <th>Nama</th>
                             <th>Email</th>
                             <th>Alamat</th>
-                            {{-- <th>Aksi</th> --}}
+                            <th>Status</th>
+                            <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,22 +36,35 @@
                             <td>{{ $product['apoteker_name'] }}</td>
                             <td>{{ $product['apoteker_email'] }}</td>
                             <td>{{ $product['apoteker_address'] }}</td>
+                            <td>
+                                @if ($product->status == '1')
+                                <span class="label label-success">Aktif</span>
+                                @elseif ($product->status == '0')
+                                <span class="label label-danger">Belum Aktif</span>
+                                @elseif ($product->status == '2')
+                                <span class="label label-danger">Pendaftaran Ditolak</span>
+                                @else
+                                <span class="label label-primary">N/A</span>
+                                @endif
+                            </td>
                             {{-- <td>
-                                <form method="POST" action="{{ URL::to('/admin/product/'.$product['id']) }}">
-                                    {{ csrf_field() }}
-                                    <input type="hidden" name="_method" value="DELETE" />
-                                    <div class="btn-group">
-                                        <a class="btn btn-info"
-                                            href="{{ URL::to('/admin/product/'.$product['id']) }}"><i
-                                                class="fa fa-eye"></i></a>
-                                        <a class="btn btn-success"
-                                            href="{{ URL::to('/admin/product/'.$product['id'].'/edit') }}"><i
-                                                class="fa fa-pencil"></i></a>
-                                        <button type="submit" class="btn btn-danger"><i
-                                                class="fa fa-trash"></i></button>
-                                    </div>
-                                </form>
+                                @if ($product->status == '1')
+                                <a class="btn btn-info"
+                                    href="{{ URL::to('/admin/apoteker/'.$product['apoteker_id']) }}"><i
+                                        class="fa fa-power-off"></i></a>
+                                @elseif ($product->status == '0')
+                                <a class="btn btn-warning"
+                                    href="{{ URL::to('/admin/apoteker/'.$product['apoteker_id']) }}"><i
+                                        class="fa fa-power-off"></i></a>
+                                @else
+                                <span class="label label-primary">N/A</span>
+                                @endif
                             </td> --}}
+                            <td>
+                                <a class="btn btn-info"
+                                    href="{{ URL::to('/admin/apoteker/'.$product['apoteker_id']) }}"><i
+                                        class="fa fa-eye"></i></a>
+                            </td>
                         </tr>
                         @endforeach
                         </tfoot>

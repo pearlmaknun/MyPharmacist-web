@@ -23,6 +23,7 @@
                             <th>Konseli</th>
                             <th>Apoteker</th>
                             <th>Pengajuan</th>
+                            <th>Mulai</th>
                             <th>Status</th>
                             <th>Aksi</th>
                         </tr>
@@ -32,13 +33,14 @@
                         @foreach($consultation as $product)
                         <tr>
                             <td>{{ $no++ }}</td>
-                            <td>{{ $product['user_id'] }}</td>
-                            <td>{{ $product['apoteker_id'] }}</td>
-                            <td>{{ $product['waktu_pengajuan'] }}</td>
+                            <td>{{ $product->konseli->user_name }}</td>
+                            <td>{{ $product->apoteker->apoteker_name }}</td>
+                            <td>{{ $product->waktu_pengajuan }}</td>
+                            <td>{{ $product->start_chat }}</td>
                             <td>
-                                @if ($product['status_chat'] == '4')
+                                @if ($product->status_chat == '4')
                                 <span class="label label-success">Selesai</span>
-                                @elseif ($product['status_chat'] == '5')
+                                @elseif ($product->status_chat == '5')
                                 <span class="label label-danger">Dilaporkan</span>
                                 @else
                                 <span class="label label-primary">N/A</span>

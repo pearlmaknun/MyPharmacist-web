@@ -26,6 +26,8 @@ class ConsultationController extends Controller
     {
         $consultation = \App\Consultation::all();
         $data = ['consultation'=>$consultation];
+        //var_dump($data);
+        //return $consultation->konseli;
         return view('admin/consultation/index')->with($data);
     }
 
@@ -66,9 +68,10 @@ class ConsultationController extends Controller
         
         $chats = $ref->getValue();
 
-        // $data = \App\Consultation::where('chat_id', $id)->get();
-        // $d = ['data'=>$data];
+        $data = \App\Consultation::where('chat_id', $id)->get();
+        $d = ['data'=>$data];
 
+        //return print_r($d);
         foreach ($chats as $chat){
             if($chat['id_konsultasi'] == $id){
                 $all_chats[] = $chat;
@@ -76,7 +79,7 @@ class ConsultationController extends Controller
         }
 
         //return $all_chats;
-        return view('admin.consultation.show', compact('all_chats'));
+        return view('admin.consultation.show', compact('all_chats'))->with($d);
     }
 
     /**

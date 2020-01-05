@@ -8,11 +8,22 @@
                 <h3 class="card-title">Data Pesan</h3>
                 {{-- <a class="btn btn-info" href="">Suspend Apoteker</a>
                 <a class="btn btn-info" href="">Suspend Konseli</a> --}}
-                {{-- <h5 class="box-title">Konseli Terkait: @php echo $data['chat_id']; @endphp</h5><p></p>
-                <h5 class="box-title">Apoteker Terkait: </h5> --}}
+                <h5 class="box-title">Konseli: {{ $data[0]->konseli->user_name }}
+                    {{-- @php echo $data['chat_id']; @endphp --}}</h5>
+                <p></p>
+                <h5 class="box-title">Apoteker: {{ $data[0]->apoteker->apoteker_name }}</h5>
+                
             </div>
             <!-- /.box-header -->
             <div class="box-body">
+                {{-- <dl class="dl-horizontal">
+                    <dt>
+                        <p>Apoteker:</p>
+                    </dt>
+                    <dd>
+                        <p></p>
+                    </dd>
+                </dl> --}}
                 @if (Session::has('message'))
                 <div id="alert-msg" class="alert alert-success alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
@@ -29,11 +40,15 @@
                     </thead>
                     <tbody>
                         @php $no = 1 @endphp
-                        @foreach($all_chats as $product)
+                        @foreach($all_chats as $a)
                         <tr>
                             <td>{{ $no++ }}</td>
-                            <td>{{ $product['pengirim'] }}</td>
-                            <td>{{ $product['pesan'] }}</td>
+                            @if ($a['pengirim'] == $data[0]->konseli->user_id)
+                            <td>Konseli</td>
+                            @elseif ($a['pengirim'] == $data[0]->apoteker->apoteker_id)
+                            <td>Apoteker</td>
+                            @endif
+                            <td>{{ $a['pesan'] }}</td>
                         </tr>
                         @endforeach
                         </tfoot>
@@ -42,8 +57,6 @@
             <!-- /.box-body -->
         </div>
         <!-- /.box -->
-
-
     </div>
     <!-- /.col -->
 </div>
